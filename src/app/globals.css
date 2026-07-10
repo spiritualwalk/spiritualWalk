@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-charcoal font-body antialiased;
+}
+
+::selection {
+  background: #D4AF37;
+  color: #FAF8F3;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+.gold-divider {
+  @apply w-16 h-px bg-gradient-to-r from-transparent via-gold to-transparent;
+}
+
+.gold-divider-lg {
+  @apply w-24 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent;
+}
+
+.eyebrow {
+  @apply text-xs tracking-widest2 uppercase text-gold-deep font-body font-semibold;
+}
+
+.btn-gold {
+  @apply relative inline-flex items-center justify-center px-8 py-3.5 font-body font-semibold text-sm tracking-wide text-charcoal
+  bg-gradient-to-r from-gold-soft via-gold to-gold-soft bg-[length:200%_100%] rounded-sm
+  transition-all duration-500 hover:bg-[position:100%_0] hover:shadow-[0_8px_30px_rgba(212,175,55,0.35)];
+}
+
+.btn-outline {
+  @apply relative inline-flex items-center justify-center px-8 py-3.5 font-body font-semibold text-sm tracking-wide text-cream
+  border border-cream/50 rounded-sm transition-all duration-500 hover:bg-cream/10 hover:border-cream;
+}
+
+.quote-text {
+  @apply font-quote italic text-charcoal-light;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-dark {
+  background: rgba(42, 42, 42, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(246, 231, 178, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
