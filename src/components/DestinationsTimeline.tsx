@@ -5,6 +5,74 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
 import { MapPin, ChevronDown } from "lucide-react";
 import { destinations } from "@/data/content";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+function ImageCarousel({ images }: { images: string[] }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "center",
+    },
+    [
+      Autoplay({
+        delay: 3500,
+        stopOnInteraction: false,
+      }),
+    ]
+  );
+
+  return (
+    <div className="relative">
+      <div
+        ref={emblaRef}
+        className="overflow-hidden rounded-lg border border-gold/10"
+      >
+        <div className="flex">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className="relative min-w-full h-64 md:h-72 bg-black/5"
+            >
+              <Image
+                src={img}
+                alt=""
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 700px"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+{/* 
+      <button
+        onClick={() => emblaApi?.scrollPrev()}
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center hover:bg-white transition"
+      >
+        <ChevronLeft size={20} />
+      </button>
+
+      <button
+        onClick={() => emblaApi?.scrollNext()}
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center hover:bg-white transition"
+      >
+        <ChevronRight size={20} />
+      </button> */}
+
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+        {images.map((_, i) => (
+          <div
+            key={i}
+            className="w-2 h-2 rounded-full bg-white/80"
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 
 export default function DestinationsTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -77,9 +145,9 @@ export default function DestinationsTimeline() {
                       className="overflow-hidden"
                     >
                       <div className="pt-5 mt-5 border-t border-gold/15">
-                        <div className="relative w-full h-48 rounded-sm overflow-hidden mb-4">
-                          <Image src={dest.image} alt={dest.name} fill className="object-cover" sizes="500px" />
-                        </div>
+                        <div className="mb-4">
+  <ImageCarousel images={dest.images} />
+</div>
                         <p className="text-sm text-charcoal-light leading-relaxed mb-4">{dest.description}</p>
                         <div className="flex flex-wrap gap-2">
                           {dest.highlights.map((h) => (

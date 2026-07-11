@@ -24,14 +24,14 @@ export default function JourneyTimeline() {
               transition={{ duration: 0.7 }}
               className={`grid md:grid-cols-2 gap-8 md:gap-14 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}
             >
-              <div className="relative h-64 md:h-96 rounded-sm overflow-hidden group [direction:ltr]">
-                <Image
-                  src={destImage(d.location)}
-                  alt={d.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-[1200ms]"
-                  sizes="600px"
-                />
+              <div className="relative h-72 md:h-[430px] rounded-xl overflow-hidden bg-[#F7F4EE] border border-gold/10 shadow-sm group [direction:ltr]">
+  <Image
+  src={destImage(d.day)}
+  alt={d.title}
+  fill
+  className="object-contain p-3"
+  sizes="(max-width:768px) 100vw, 600px"
+/>
                 <div className="absolute top-5 left-5 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-sm">
                   <span className="text-xs tracking-widest2 uppercase text-gold-deep font-semibold">Day {String(d.day).padStart(2, "0")}</span>
                 </div>
@@ -48,7 +48,14 @@ export default function JourneyTimeline() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs text-charcoal-light/70 tracking-wide">Stay: {d.stay}</p>
+                <div className="border-t border-gold/15 pt-5">
+  <p className="text-sm font-medium text-charcoal">
+    Accommodation
+  </p>
+  <p className="text-sm text-charcoal-light mt-1">
+    {d.stay}
+  </p>
+</div>
               </div>
             </motion.div>
           ))}
@@ -58,18 +65,21 @@ export default function JourneyTimeline() {
   );
 }
 
-function destImage(location: string) {
-  const map: Record<string, string> = {
-    Delhi: "/images/mahabodhi-2.jpg",
-    "Bodh Gaya": "/images/mahabodhi-1.jpg",
-    Rajgir: "/images/bodhitree.jpg",
-    Nalanda: "/images/mahabodhi-2.jpg",
-    Vaishali: "/images/mahabodhi-1.jpg",
-    Kushinagar: "/images/bodhitree.jpg",
-    Lumbini: "/images/mahabodhi-2.jpg",
-    Sarnath: "/images/mahabodhi-1.jpg",
-    Varanasi: "/images/mahabodhi-2.jpg",
-    "Varanasi / Delhi": "/images/mahabodhi-1.jpg",
+function destImage(day: number) {
+  const map: Record<number, string> = {
+    1: "/images/india-gate-delhi.jpg",
+    2: "/images/Bodhgaya-Mahabodhi-Original-00002.jpg",
+    3: "/images/bodhitree.jpg",
+    4: "/images/Shanti-Stupa-Rajgir.jpg",
+    5: "/images/nalanda-ruines.jpg",
+    6: "/images/Anand-Stupa-Vaishali.jpg",
+    7: "/images/mahaparinirvana-kushinagar-temple.jpg",
+    8: "/images/lumbini-lord-buddha-temple.jpg",
+    9: "/images/sarnath-temple.webp",
+    10: "/images/varanashi-morning.jpg",
+    11: "/images/Ganga-Aarti-Varanasi-1.webp",
+    12: "/images/varanasi_day_tours_kashi_vishwanath_temple_2_.jpeg",
   };
-  return map[location] || "/images/mahabodhi-1.jpg";
+
+  return map[day] || "/images/mahabodhi-1.jpg";
 }

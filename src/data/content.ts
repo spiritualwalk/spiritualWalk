@@ -6,6 +6,12 @@ export const destinations = [
       "Beneath the sacred Bodhi Tree, Prince Siddhartha became the Buddha. The Mahabodhi Temple still radiates the stillness of that dawn.",
     highlights: ["Mahabodhi Temple", "The Bodhi Tree", "Monastic Circuit", "Sunrise Meditation"],
     image: "/images/mahabodhi-1.jpg",
+    images: [
+  "/images/thai-temple-bodhgaya.jpg",
+  "/images/watta-buddha-temple.jpg",
+  "/images/bodhitree.jpg",
+  "/images/80ft-lordd-buddha.jpg", 
+],
     lat: 24.6959,
     lng: 84.9911,
   },
@@ -15,9 +21,15 @@ export const destinations = [
     description:
       "Ringed by five sacred hills, Rajgir holds the Vulture's Peak, where the Buddha delivered some of his most profound teachings.",
     highlights: ["Vulture's Peak", "Venuvana Monastery", "Hot Springs", "Cable Car to Shanti Stupa"],
-    image: "/images/mahabodhi-2.jpg",
+    image: "/images/Shanti-Stupa-Rajgir.jpg",
     lat: 25.0299,
     lng: 85.4199,
+    images: [
+  "/images/Ghora-Katora-Lake-Rajgir-Bihar.jpg",
+  "/images/Shanti-Stupa-Rajgir.jpg",
+  // "/images/bodhitree.jpg",
+  // "/images/mahabodhi-3.jpg", // optional
+],
   },
   {
     name: "Nalanda",
@@ -25,9 +37,15 @@ export const destinations = [
     description:
       "Scholars from across Asia once walked these red-brick halls. Nalanda remains a monument to knowledge as a spiritual pursuit.",
     highlights: ["Nalanda Ruins", "Archaeological Museum", "Xuanzang Memorial", "Ancient Library Site"],
-    image: "/images/bodhitree.jpg",
+    image: "/images/nalanda-ruines.jpg",
     lat: 25.1358,
     lng: 85.4436,
+    images: [
+  "/images/nalanda-ruines-scraps.jpg",
+  "/images/ruines-of-nalanda.jpg",
+    "/images/nalanda-ruines.jpg",
+  // "/images/mahabodhi-3.jpg", // optional
+],
   },
   {
     name: "Vaishali",
@@ -35,9 +53,15 @@ export const destinations = [
     description:
       "A city of democratic councils and quiet groves, where the Buddha announced his approaching parinirvana.",
     highlights: ["Ashoka Pillar", "Relic Stupa", "Kolhua Grove", "Coronation Tank"],
-    image: "/images/mahabodhi-1.jpg",
+    image: "/images/Anand-Stupa-Vaishali.jpg",
     lat: 25.9833,
     lng: 85.1333,
+    images: [
+  "/images/abhayagiri-dagoba-anuradhapura-major-city.webp",
+  "/images/Anand-Stupa-Vaishali.jpg",
+  //"/images/bodhitree.jpg",
+  // "/images/mahabodhi-3.jpg", // optional
+],
   },
   {
     name: "Kushinagar",
@@ -45,7 +69,13 @@ export const destinations = [
     description:
       "In a grove of sal trees, the Buddha's earthly journey ended. A reclining statue marks the site with profound serenity.",
     highlights: ["Mahaparinirvana Temple", "Ramabhar Stupa", "Reclining Buddha", "Sal Grove"],
-    image: "/images/mahabodhi-2.jpg",
+    image: "/images/buddha-temple-kushinagar.jpg",
+    images: [
+  "/images/mahaparinirvana-kushinagar.jpg",
+  "/images/mahaparinirvana-kushinagar-temple.jpg",
+  "/images/buddha-temple-kushinagar.jpg",
+ // "/images/mahabodhi-3.jpg", // optional
+],
     lat: 26.7411,
     lng: 83.8899,
   },
@@ -55,7 +85,13 @@ export const destinations = [
     description:
       "Across the border in Nepal, the Maya Devi Temple marks the exact spot of Buddha's birth beside the sacred pond.",
     highlights: ["Maya Devi Temple", "Ashoka Pillar", "Sacred Pond", "World Peace Pagoda"],
-    image: "/images/bodhitree.jpg",
+    image: "/images/lumbini-lord-buddha-temple.jpg",
+    images: [
+  "/images/buddhist-temple-in-lumbini-nepal.avif",
+  "/images/maya-devi-temple-birth-place-lord-gautam-buddha-lumbini-nepal.avif",
+  "/images/lumbini-lord-buddha-temple.jpg",
+  //"/images/mahabodhi-3.jpg", // optional
+],
     lat: 27.4833,
     lng: 83.2767,
   },
@@ -65,7 +101,13 @@ export const destinations = [
     description:
       "In the Deer Park at Sarnath, the Buddha set the Wheel of Dharma in motion, delivering his first teaching.",
     highlights: ["Dhamek Stupa", "Deer Park", "Archaeological Museum", "Mulagandha Kuti Vihar"],
-    image: "/images/mahabodhi-1.jpg",
+    image: "/images/dhamek-stupa.jpg",
+    images: [
+  "/images/sarnath-temple.webp",
+  "/images/sarnath-temple.webpMatma-Buddha-sarnath.jpg",
+  "/images/dhamek-stupa.jpg",
+  "/images/mahabodhi-3.jpg", // optional
+],
     lat: 25.3811,
     lng: 83.0219,
   },
@@ -75,7 +117,13 @@ export const destinations = [
     description:
       "One of the world's oldest living cities, where fire and water meet at dawn in a ceremony older than memory.",
     highlights: ["Ganga Aarti", "Sunrise Boat Ride", "Ancient Ghats", "Silk Weaving Quarter"],
-    image: "/images/mahabodhi-2.jpg",
+    image: "/images/varanashi-ghats.png",
+    images: [
+  "/images/Ganga-Aarti-Varanasi-1.webp",
+  "/images/ganga-varanashi.jpg",
+  "/images/varanashi-ghats.png",
+ // "/images/mahabodhi-3.jpg", // optional
+],
     lat: 25.3176,
     lng: 82.9739,
   },
