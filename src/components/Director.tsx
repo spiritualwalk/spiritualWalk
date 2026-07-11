@@ -5,24 +5,84 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const profiles = [
+  // {
+  //   id: "director",
+  //   title: "Meet Our Director",
+  //   image: "/images/director.jpg",
+  //   name: "Founder & Director",
+  //   role: "Spiritual Walk",
+  //   experience: "20+ Years of Experience",
+  //   quote: "Every journey we craft is an invitation to walk gently through history, and to leave each place a little better than we found it.",
+  //   signatureTitle: "Founder & Director",
+  //   signatureName: "Roni Porat",
+  //   points: [
+  //     "Over two decades of experience guiding spiritual and cultural journeys across India",
+  //     "A lifelong commitment to authentic Buddhist pilgrimage, rooted in respect and reverence",
+  //     "Deep partnerships with local monasteries, artisans and rural communities",
+  //     "Dedicated to the preservation of India's ancient heritage for future generations",
+  //     "A personal, considered approach to every guest's spiritual and wellness experience",
+  //   ]
+  // },
+
   {
-    id: "director",
-    title: "Meet Our Director",
-    image: "/images/director.jpg",
-    name: "Founder & Director",
-    role: "Spiritual Walk",
-    experience: "20+ Years of Experience",
-    quote: "Every journey we craft is an invitation to walk gently through history, and to leave each place a little better than we found it.",
+    id: "reyaz-alam",
+    title: "Meet Our Founder & Director",
+    image: "/images/reyaz.jpeg",
+    name: "Reyaz Alam",
+    role: "Founder & Director | Spiritual Walk Retreat",
+    experience: "With over 12 years of experience",
+    quote: "My mission is simple: to welcome every guest with warmth, guide them with integrity, and leave them with memories that last a lifetime.",
     signatureTitle: "Founder & Director",
-    signatureName: "Roni Porat",
+    signatureName: "Reyaz Alam",
     points: [
-      "Over two decades of experience guiding spiritual and cultural journeys across India",
-      "A lifelong commitment to authentic Buddhist pilgrimage, rooted in respect and reverence",
-      "Deep partnerships with local monasteries, artisans and rural communities",
-      "Dedicated to the preservation of India's ancient heritage for future generations",
-      "A personal, considered approach to every guest's spiritual and wellness experience",
+      "With over 12 years of experience in the tourism and hospitality industry, I have dedicated my career to creating meaningful, authentic, and well-organized travel experiences. My vision for Spiritual Walk Retreat is to offer journeys that go beyond sightseeing—experiences that inspire inner peace, cultural understanding, and personal transformation.",
+      "I firmly believe that every traveler deserves exceptional service, genuine care, and true value for money. Customer satisfaction has always been at the heart of everything I do, and I am committed to ensuring that every guest enjoys a seamless, comfortable, and memorable journey from arrival to departure.",
+      "At Spiritual Walk Retreat, we carefully design premium Buddhist pilgrimage tours, meditation retreats, yoga experiences, and cultural immersions that combine quality accommodations, reliable transportation, wholesome meals, and authentic local experiences. Every itinerary reflects our commitment to excellence, transparency, and personalized service."
     ]
   },
+
+  {
+    id: "roni-co-director",
+    title: "Meet Our Co-Director",
+    image: "/images/director.jpg",
+    name: "Roni Porat",
+    role: "My-Lifes-Creation - The Art of Living",
+    experience: "Nearly four decades of research",
+    quote: "In MyLifesCreation course we actually learn to act and manage ourselves in our lives, as composers and conductors. We can say that we learn to \"conduct the orchestra that is us and compose our personal symphony\"",
+    signatureTitle: "Co-Director",
+    signatureName: "Roni Porat",
+    points: [
+      "Orchestra conductor, stage artist, mentor and spiritual teacher Roni Porat has been engaged for nearly four decades in the study and researching of the mind (consciousness / awareness), the world of music and the connection between them.",
+      "The core lessons that Roni teaches as part of his retreats worldwide, are original, extraordinary and actually constitute a concentrated, experiential \"my lifes creation\" course full of mental and physical musical experiences.",
+      "In the course, Roni opens up to us the world of music (mainly western classical and local classical folklore music), analyzes and introduces us - in an equal way for everyone - to the great and immortal works as well as the art of conducting, as tools for observing and studying our way of thinking, just as the conductor knows his orchestra, leads and produces from it what he wants.",
+      "Music has a wonderful ability to penetrate directly into the emotional world, bypass the world of thought and influence our mood and strength.",
+      "Roni teaches us what can be learned from musical structures, motifs, melodies, frequency of repetition in music, musical tensions and more, about our automatic thought structures.",
+      "As part of the experiments, we learn to use non-automatic thinking, creative, predictable and beneficial thinking, as well as to listen to the depth of the music and to several musical lines that appear simultaneously that we were not aware of, and this is in analogy to our unconscious world, which has a huge impact on our feelings and functioning.",
+      "Another great bonus in the lessons - we get to know wonderful music and learn to listen to it.",
+      "Most importantly - there is no need for any education or musical skill in order to be rewarded and enjoy the retreat.",
+      "This year, within the framework of the content, we will focus on the value of creativity in thought and practice, as the key to creating a quality of life and inner peace. Creation, and especially conscious creation, constitutes the human right over any other living being.",
+      "When we use the innate creativity in us, for the sake of improving our self-management ability and from there to improve our life experience and quality, we will actually become 'artists of our lives' and hence, the words 'art of life' were added to the title of the Life Creation project.",
+      "As part of the pilgrimage tours following the Buddha's journey, Roni Porat, who breathes Buddhism, will integrate the spiritual contents taught by local teachers as well as the values of local culture, into the content of 'MyLifesCrestion'"
+    ]
+  },
+
+{
+    id: "dinesh-mishra",
+    title: "Meet Our Classical Music & Kathak Ensemble",
+    image: "/images/dinesh.jpeg",
+    name: "Dinesh Mishra & Team",
+    role: "Classical Music & Kathak Ensemble",
+    experience: "With over 30 years of distinguished experience",
+    quote: "Where tradition meets devotion, every performance becomes a journey of the soul.",
+    signatureTitle: "Classical Music & Kathak Ensemble",
+    signatureName: "Dinesh Mishra & Team",
+    points: [
+      "With over 30 years of distinguished experience, Dinesh Mishra & Team are highly respected performers in the field of Indian Classical Music and Kathak Dance. Their artistic journey reflects a lifelong commitment to preserving and promoting India’s rich cultural and spiritual heritage through soulful performances.",
+      "Recognized for their contributions to Indian classical arts, the team has performed at prestigious cultural festivals, spiritual gatherings, government programs, and national and international events. Their performances beautifully blend the elegance of Kathak, the depth of Hindustani Classical Music, and the timeless traditions of Indian spirituality, creating unforgettable experiences for audiences. Their work aligns with India’s broader efforts to preserve and promote classical performing arts.",
+      "At Spiritual Walk, Dinesh Mishra & Team present immersive cultural experiences through live classical concerts, devotional music, Kathak recitals, meditation music, and heritage performances that enrich every spiritual retreat and pilgrimage."
+    ]
+  },
+
   {
     id: "bhante",
     title: "Meet Our Meditator • Vipassana Teacher",
@@ -41,6 +101,9 @@ const profiles = [
       "Providing personal guidance to helpers and spiritual practitioners on the path",
     ]
   },
+  
+  
+  
 ];
 
 export default function Director() {
@@ -51,7 +114,7 @@ export default function Director() {
     stopTimer();
     timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % profiles.length);
-    }, 5000);
+    }, 7000);
   };
 
   const stopTimer = () => {
