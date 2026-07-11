@@ -44,9 +44,14 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <LotusIcon className="w-9 h-9 group-hover:scale-110 transition-transform duration-500" />
           <div className="leading-tight">
-            <div className={cn("font-display text-Xl tracking-widest1 uppercase", light ? "text-charcoal" : "text-white")}>
-              Spiritual Walk
-            </div>
+           <div
+  className={cn(
+    "font-display text- font-semibold tracking-widest uppercase whitespace-nowrap mr-12",
+    light ? "text-charcoal" : "text-white"
+  )}
+>
+  Spiritual Walk
+</div>
             <div className={cn("text-[10px] tracking-wide font-body", light ? "text-charcoal-light/70" : "text-white/70")}>
               Walk in the Footsteps of the Buddha
             </div>

@@ -8,7 +8,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-28 md:py-36 bg-[#F8F5EF] relative overflow-hidden"
+      className="py-28 md:py-36 bg-white relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Heading */}
