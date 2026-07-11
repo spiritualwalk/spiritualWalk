@@ -44,7 +44,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <LotusIcon className="w-9 h-9 group-hover:scale-110 transition-transform duration-500" />
           <div className="leading-tight">
-            <div className={cn("font-display text-xl tracking-widest2 uppercase", light ? "text-charcoal" : "text-white")}>
+            <div className={cn("font-display text-Xl tracking-widest1 uppercase", light ? "text-charcoal" : "text-white")}>
               Spiritual Walk
             </div>
             <div className={cn("text-[10px] tracking-wide font-body", light ? "text-charcoal-light/70" : "text-white/70")}>
@@ -64,10 +64,10 @@ export default function Navbar() {
               )}
             >
               {l.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
-          <Link href="/booking" className="btn-gold">
+          <Link href="/booking" className= "btn-gold w-fit whitespace-nowrap">
             Book Retreat
           </Link>
         </nav>
@@ -95,7 +95,7 @@ export default function Navbar() {
                   {l.label}
                 </Link>
               ))}
-              <Link href="/booking" className="btn-gold w-fit" onClick={() => setOpen(false)}>
+              <Link href="/booking" className="btn-gold w-fit whitespace-nowrap" onClick={() => setOpen(false)}>
                 Book Retreat
               </Link>
             </div>
