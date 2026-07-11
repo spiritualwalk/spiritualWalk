@@ -48,7 +48,7 @@ export default function Footer() {
             <h4 className="font-display text-base mb-5 text-gold-soft">Contact</h4>
             <ul className="space-y-3 text-sm text-cream/60">
               <li className="flex items-center gap-2"><Mail size={14} /> spiritualwalk61@gmail.com</li>
-              <li className="flex items-center gap-2"><Phone size={14} /> +91 98765 43210</li>
+              <li className="flex items-center gap-2"><Phone size={14} /> +91 8287686283, +91 8002701077</li>
               <li className="flex items-center gap-2"><MapPin size={14} /> Bodh Gaya, Bihar, India</li>
             </ul>
           </div>
