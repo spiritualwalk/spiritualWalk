@@ -26,7 +26,7 @@ const profiles = [
   {
     id: "bhante",
     title: "Meet Our Meditator • Vipassana Teacher",
-    image: "/images/Sangha-Jyoti.jpeg",
+    image: "/images/Sangha-Jyoti-Teacher.jpeg",
     name: "Bhante Sangha Jyoti",
     role: "Meditator • Vipassana Teacher",
     experience: "20+ Years Experience",
