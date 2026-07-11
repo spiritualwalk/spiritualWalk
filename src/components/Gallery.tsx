@@ -7,11 +7,11 @@ import { X } from "lucide-react";
 
 const galleryImages = [
   { src: "/images/mahabodhi-1.jpg", alt: "Mahabodhi Temple with monks", tall: true },
-  { src: "/images/bodhitree.jpg", alt: "Lotus offerings at the Bodhi Tree" },
-  { src: "/images/mahabodhi-2.jpg", alt: "A monk beside the Mahabodhi Temple", tall: true },
-  { src: "/images/mahabodhi-1.jpg", alt: "Monks in procession" },
-  { src: "/images/bodhitree.jpg", alt: "Pilgrims beneath the sacred tree" },
-  { src: "/images/mahabodhi-2.jpg", alt: "Golden hour at the temple", tall: true },
+  { src: "/images/Ganga-Aarti-Varanasi-1.webp", alt: "Varanashi Evening Aarti" },
+  { src: "/images/nalanda-ruines-scraps.jpg", alt: "Nalanda Ruins", tall: true },
+  { src: "/images/abhayagiri-dagoba-anuradhapura-major-city.webp", alt: "Pilgrims beneath the sacred tree"},
+  { src: "/images/Shanti-Stupa-Rajgir.jpg", alt: "Shanti Stupa in Rajgir", tall: true  },
+  { src: "/images/dhamek-stupa.jpg", alt: "Dhamek Stupa", tall: true },
 ];
 
 export default function Gallery() {

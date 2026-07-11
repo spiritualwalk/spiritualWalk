@@ -157,13 +157,13 @@ export const wellnessSchedule = [
 
 export const experiences = [
   { title: "Meditation Beneath the Bodhi Tree", description: "Sit in silence at the exact site of enlightenment, guided by a resident monk.", image: "/images/bodhitree.jpg" },
-  { title: "Sunrise Yoga Sessions", description: "Gentle practice as the temple spires catch the first light.", image: "/images/mahabodhi-1.jpg" },
-  { title: "Monastic Chanting", description: "An evening of ancient chant shared with monastery residents.", image: "/images/mahabodhi-2.jpg" },
-  { title: "Village Handloom Weaving", description: "Meet artisans keeping centuries-old weaving traditions alive.", image: "/images/bodhitree.jpg" },
-  { title: "Silk Weaving of Varanasi", description: "Witness master weavers at work in the silk quarter.", image: "/images/mahabodhi-1.jpg" },
-  { title: "Ayurvedic Wellness", description: "Traditional healing rituals to restore balance and calm.", image: "/images/mahabodhi-2.jpg" },
-  { title: "Private Spiritual Guidance", description: "One-on-one conversation with your personal spiritual guide.", image: "/images/bodhitree.jpg" },
-  { title: "Traditional Music Evenings", description: "Classical Indian music performed under open skies.", image: "/images/mahabodhi-1.jpg" },
+  { title: "Sunrise Yoga Sessions", description: "Gentle practice as the temple spires catch the first light.", image: "/images/yoga-bodhgaya.jpg" },
+  { title: "Monastic Chanting", description: "An evening of ancient chant shared with monastery residents.", image: "/images/Monastic-Chanting.jpg" },
+  { title: "Village Handloom Weaving", description: "Meet artisans keeping centuries-old weaving traditions alive.", image: "/images/traditional-indian-sari-weaving-handloom-with-vibrant-threads.avif" },
+  { title: "Silk Weaving of Varanasi", description: "Witness master weavers at work in the silk quarter.", image: "/images/Village-Handloom-Weaving.jpg" },
+  { title: "Ayurvedic Wellness", description: "Traditional healing rituals to restore balance and calm.", image: "/images/ayurveda-india-symbol-indian-illustration.avif" },
+  { title: "Private Spiritual Guidance", description: "One-on-one conversation with your personal spiritual guide.", image: "/images/Private-Spiritual-Guidance.webp" },
+  { title: "Traditional Music Evenings", description: "Classical Indian music performed under open skies.", image: "/images/sunset-holi-folk-music.jpg" },
 ];
 
 export const packageIncludes = [
