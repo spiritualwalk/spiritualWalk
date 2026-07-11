@@ -73,7 +73,7 @@ function destImage(day: number) {
     4: "/images/Shanti-Stupa-Rajgir.jpg",
     5: "/images/nalanda-ruines.jpg",
     6: "/images/Anand-Stupa-Vaishali.jpg",
-    7: "/images/mahaparinirvana-kushinagar-temple.jpg",
+    7: "/images/mahaparinirvana-kushinagar.jpg",
     8: "/images/lumbini-lord-buddha-temple.jpg",
     9: "/images/sarnath-temple.webp",
     10: "/images/varanashi-morning.jpg",

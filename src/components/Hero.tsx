@@ -60,7 +60,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="eyebrow text-gold font-semibold mb-6 tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]"
         >
-          12 Days &middot; Bihar &amp; Uttar Pradesh, India
+          12 Days &middot; Bihar, Uttar Pradesh, India &amp; Nepal
         </motion.p>
 
         <motion.h1
