@@ -47,13 +47,13 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-base mb-5 text-gold-soft">Contact</h4>
             <ul className="space-y-3 text-sm text-cream/60">
-              <li className="flex items-center gap-2"><Mail size={14} /> journeys@spiritualwalk.com</li>
+              <li className="flex items-center gap-2"><Mail size={14} /> spiritualwalk61@gmail.com</li>
               <li className="flex items-center gap-2"><Phone size={14} /> +91 98765 43210</li>
               <li className="flex items-center gap-2"><MapPin size={14} /> Bodh Gaya, Bihar, India</li>
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="font-display text-base mb-5 text-gold-soft">Newsletter</h4>
             <p className="text-sm text-cream/60 mb-4">Reflections and journey updates, occasionally.</p>
             <form className="flex gap-2">
@@ -69,13 +69,13 @@ export default function Footer() {
               <Facebook size={18} className="hover:text-gold-soft transition-colors cursor-pointer" />
               <Youtube size={18} className="hover:text-gold-soft transition-colors cursor-pointer" />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="gold-divider-lg mx-auto mb-8" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/40">
-          <p>© {new Date().getFullYear()} Spiritual Walk. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} THE CYBER LOOM // Managed and Developed by The Cyber Loom</p>
           <div className="flex gap-6">
             {legalLinks.map((l) => (
               <Link key={l.label} href={l.href} className="hover:text-gold-soft transition-colors">
