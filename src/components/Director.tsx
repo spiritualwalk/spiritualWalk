@@ -109,6 +109,7 @@ const profiles = [
 export default function Director() {
   const [current, setCurrent] = useState(0);
   const [showMore, setShowMore] = useState(false);
+  const [selectedProfile, setSelectedProfile] = useState<(typeof profiles)[0] | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const startTimer = () => {
@@ -116,7 +117,7 @@ export default function Director() {
     timerRef.current = setInterval(() => {
       setShowMore(false);
       setCurrent((prev) => (prev + 1) % profiles.length);
-    }, 7000);
+    }, 20000);
   };
 
   const stopTimer = () => {
@@ -150,7 +151,7 @@ export default function Director() {
       <div className="max-w-6xl mx-auto px-10 md:px-16 relative">
         
         {/* Global Nav Controls: Pinned seamlessly to left & right limits of layout content box */}
-        <div className="absolute inset-y-0 left-0 right-0 pointer-events-none flex items-center justify-between z-20">
+        <div className="hidden md:flex absolute inset-y-0 left-0 right-0 pointer-events-none items-center justify-between z-20">
           <button
             onClick={handlePrev}
             className="w-12 h-12 ml-2 md:-ml-4 border border-gold/40 rounded-full flex items-center justify-center text-gold bg-beige/80 backdrop-blur-sm pointer-events-auto hover:bg-gold hover:text-white transition-all duration-300 shadow-sm"
@@ -176,7 +177,8 @@ export default function Director() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative cursor-pointer"
+            onClick={() => setSelectedProfile(activeProfile)}
           >
             <div className="absolute -inset-4 border border-gold/30 rounded-sm -z-10" />
 
@@ -210,6 +212,8 @@ export default function Director() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
+            className="cursor-pointer"
+            onClick={() => setSelectedProfile(activeProfile)}
           >
             <p className="eyebrow mb-4">A Personal Word</p>
 
@@ -284,6 +288,55 @@ export default function Director() {
 
         </div>
       </div>
+    
+      <AnimatePresence>
+        {selectedProfile && (
+          <motion.div
+            className="fixed inset-0 z-[999] bg-black/60 backdrop-blur-md flex items-center justify-center p-5"
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            exit={{opacity:0}}
+            onClick={() => setSelectedProfile(null)}
+          >
+            <motion.div
+              initial={{scale:0.92,opacity:0}}
+              animate={{scale:1,opacity:1}}
+              exit={{scale:0.92,opacity:0}}
+              onClick={(e)=>e.stopPropagation()}
+              className="relative bg-[#F8F5EF] rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-hidden"
+            >
+              <button
+                onClick={() => setSelectedProfile(null)}
+                className="absolute right-5 top-5 w-11 h-11 rounded-full bg-white shadow-lg hover:bg-gold hover:text-white transition-all z-50"
+              >
+                ✕
+              </button>
+              <div className="grid md:grid-cols-[380px_1fr]">
+                <div className="relative h-[350px] md:h-auto bg-charcoal/5">
+                  <Image src={selectedProfile.image} alt={selectedProfile.name} fill className="object-contain p-6"/>
+                </div>
+                <div className="overflow-y-auto max-h-[90vh] px-10 py-10">
+                  <p className="uppercase tracking-[0.25em] text-gold text-sm mb-2">{selectedProfile.role}</p>
+                  <h2 className="text-4xl font-semibold text-charcoal mb-3">{selectedProfile.name}</h2>
+                  <p className="text-charcoal-light mb-8">{selectedProfile.experience}</p>
+                  <blockquote className="italic text-xl text-charcoal-light border-l-4 border-gold pl-5 mb-10">
+                    "{selectedProfile.quote}"
+                  </blockquote>
+                  <div className="space-y-6">
+                    {selectedProfile.points.map((point,index)=>(
+                      <div key={index} className="flex gap-4">
+                        <span className="w-2 h-2 rounded-full bg-gold mt-3 shrink-0"/>
+                        <p className="leading-8 text-charcoal-light">{point}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </section>
   );
 }
