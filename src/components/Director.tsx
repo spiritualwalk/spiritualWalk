@@ -108,11 +108,13 @@ const profiles = [
 
 export default function Director() {
   const [current, setCurrent] = useState(0);
+  const [showMore, setShowMore] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const startTimer = () => {
     stopTimer();
     timerRef.current = setInterval(() => {
+      setShowMore(false);
       setCurrent((prev) => (prev + 1) % profiles.length);
     }, 7000);
   };
@@ -129,11 +131,13 @@ export default function Director() {
   }, []);
 
   const handlePrev = () => {
+    setShowMore(false);
     setCurrent((prev) => (prev === 0 ? profiles.length - 1 : prev - 1));
     startTimer();
   };
 
   const handleNext = () => {
+    setShowMore(false);
     setCurrent((prev) => (prev + 1) % profiles.length);
     startTimer();
   };
@@ -239,8 +243,13 @@ export default function Director() {
                   "{activeProfile.quote}"
                 </p>
 
-                <ul className="space-y-4 mb-10">
-                  {activeProfile.points.map((point, index) => (
+                <ul className="space-y-4 mb-6">
+                  {(activeProfile.id === "roni-co-director"
+                    ? (showMore
+                        ? activeProfile.points
+                        : activeProfile.points.slice(0, 4))
+                    : activeProfile.points
+                  ).map((point, index) => (
                     <li
                       key={index}
                       className="flex gap-3 text-sm text-charcoal-light leading-relaxed"
@@ -250,6 +259,15 @@ export default function Director() {
                     </li>
                   ))}
                 </ul>
+
+                {activeProfile.id === "roni-co-director" && (
+                  <button
+                    onClick={() => setShowMore(!showMore)}
+                    className="mb-10 px-5 py-2 border border-gold rounded-full text-gold text-sm font-medium hover:bg-gold hover:text-white transition-all duration-300"
+                  >
+                    {showMore ? "Read Less" : "Read More"}
+                  </button>
+                )}
 
                 {/* Structured Multi-line Footer Signature Component Area */}
                 <div className="border-t border-gold/20 pt-6 flex flex-col gap-1 inline-block">
